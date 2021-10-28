@@ -1,0 +1,131 @@
+.footer {
+    background-color: $darkOrange;
+    color: $white;
+    padding: 2.5rem 2.5rem 0.5rem;
+    text-align: center;
+    
+    
+    .container {
+        @include breakpoint-up(large) {
+            min-height: 18rem;
+            & > *:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+    a {
+        color: $white;
+    }
+    &__logo{
+        display: inline-block;
+        img {
+            height: 3rem;
+        }
+        
+        @include breakpoint-up(medium) {
+            margin-bottom: 1.875rem;
+        }
+    }
+    &__social {
+
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+        }
+        a {
+            display: inline-block;
+            height: 1.25rem;
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+
+            &:hover svg path {
+                fill: $shadowOrange
+            }
+        }
+        a:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.125rem;
+
+        @include breakpoint-up(large) {
+            flex-direction: row;
+            justify-content: center;
+            max-width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        & a img{
+            width: 12px;
+            margin-left: 5px;
+        }
+        @include breakpoint-up(large) {
+            & a {
+                padding: 0 1rem;
+                border-left: 1px solid white;
+                &:last-child {
+                    border-right: 1px solid white;
+                }
+            }
+            & a img{
+                display: none;
+            }
+        }
+
+        &.row1 {
+            font-weight: 700;
+            
+        }
+        &.row2 {
+            font-size: 0.875rem;
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.875rem;
+            }
+
+            // @include breakpoint-up(large) {
+            //     grid-area: link2;
+            // }
+        }
+        a {
+            line-height: 2.25;
+            transition: color 150ms ease-in-out;
+            &:hover {
+                color: $shadowOrange;
+            }
+        }
+    }
+
+    // &__cta {
+
+    //     @include breakpoint-up(large) {
+    //         grid-area: cta;
+    //         text-align: right;
+    //         justify-self: end;
+    //     }
+    //     a.button {
+    //         @include breakpoint-up(medium) {
+    //             margin-bottom: 1.875rem;
+    //         }
+    //     }
+    // }
+
+    &__copyright {
+        font-size: 0.8125rem;
+        color: $white;
+
+        // @include breakpoint-up(large) {
+        //     grid-area: copyright;
+        //     align-self: end;
+        //     justify-self: end;
+        // }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

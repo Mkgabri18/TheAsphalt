@@ -1,0 +1,57 @@
+$darkBlue: hsl(233, 26%, 24%);
+$shadowOrange: #6a1502;
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$deepBlack: #1c1c1c;
+$white: hsl(0, 0%, 100%);
+
+$darkOrange: #d84826;
+
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  "medium": 60em,
+  "large": 80em,
+  "xlarge": 87.5em
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "small": 23.375em,
+  "medium": 79.9375em,
+  "large": 87.4375em
+);
+
+
+// variables de capas ( z-index )
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+
+//Font sizes
+$font-xlg: 3.25rem;  // 52px
+$font-lg: 1.25rem;  // 20px
+$font-md: 1.125rem; // 18px
+$font-sm: 0.875rem; // 14px
+
+// varibles de typografia
+$h1-font-size: 2.31rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$body-font-size: .9rem;
+$small-font-size: .75rem;
+$banner-text-size: 2.4rem;
+// @include breakpoint-up(large) {
+//   $h1-font-size: 2.5rem;
+//   $h2-font-size: 1.75rem;
+//   $h3-font-size: 1.5rem;
+//   $body-font-size: 1rem;
+//   $small-font-size: .8rem;
+//   $banner-text-size: 1.6rem;  
+// }
+
+//variables de font
+$lato: 'Lato', sans-serif;

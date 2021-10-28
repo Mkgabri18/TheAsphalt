@@ -1,0 +1,49 @@
+//- - const links = ['Guita TV', 'Programmi', 'Novita', 'Scopri Discovery+', 'Podcast'];
+- 
+    const links = [
+        {
+                name: "Guita TV",
+                hasChild: true
+            },
+            {
+                name: "Programmi",
+                hasChild: true
+            },
+            {
+                name: "Novita",
+                hasChild: true
+            },
+            {
+                name: "Scopri Discovery+",
+                hasChild: true
+            },
+            {
+                name: "Podcast",
+                hasChild: true
+            }
+    ];
+
+header.header
+    .overlay.has-fade
+    nav.container.container--pall.flex.flex-jc-sb.flex-ai-c
+        a(href="/").header__logo.hide-for-mobile
+            img(src="./images/shape-logo.svg", alt="The Asphalt Logo")
+        a(href="#")#btnHambuger.header__toggle.hide-for-desktop
+            span
+            span
+            span
+        
+        .header__links.hide-for-mobile
+            each link in links
+                a(href="#")= link.name
+                    //- if link.hasChild    
+                    //-     img(src="./images/down.svg", alt="submenu")
+        
+        span.header__search.hide-for-mobile 
+            img(src="./images/search.svg", alt="search")
+    
+    .header__menu.has-fade
+        each link in links
+            a(href="#")= link.name
+                //- if link.hasChild    
+                //-     img(src="./images/down.svg", alt="submenu")

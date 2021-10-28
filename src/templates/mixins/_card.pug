@@ -1,0 +1,18 @@
+
+
+mixin card(image, title, description, seasonStatus, duration,isWatching )
+    .season__item
+        .season__image(style=`background-image:url('./images/${image}.jpg')`)
+            p.season__headInfo.no-margin.flex(class= isWatching ? 'flex-jc-sb' : 'flex-jc-fe')
+                if isWatching
+                    span.season__flag Watching now
+
+                span.season__icon
+                    img(src="./images/icon-play.svg", alt="icon play")
+
+        .season__text.flex.flex-dc
+            h2.season__title= title
+            p.season__description= description
+            p.season__status
+                span.season__ep= seasonStatus
+                span.season__duration= duration

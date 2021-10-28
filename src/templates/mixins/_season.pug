@@ -1,0 +1,39 @@
+
+include ../mixins/_card.pug
+
+//- -
+//-  var cards = [
+//-      {
+//-          image: 'image-currency',
+//-          author: 'by Gabriel Carrasco',
+//-          title: 'Recieve money in any currency with no fees',
+//-          text: "The world is getting smaller and we're becoming more mobile. So why should you be forces to only received money in a single ..."
+//-      },
+//-      {
+//-          image: 'image-currency',
+//-          author: 'by Gabriel Carrasco',
+//-          title: 'Recieve money in any currency with no fees',
+//-          text: "The world is getting smaller and we're becoming more mobile. So why should you be forces to only received money in a single ..."
+//-      },
+//-      {
+//-          image: 'image-currency',
+//-          author: 'by Gabriel Carrasco',
+//-          title: 'Recieve money in any currency with no fees',
+//-          text: "The world is getting smaller and we're becoming more mobile. So why should you be forces to only received money in a single ..."
+//-      },
+//-      {
+//-          image: 'image-currency',
+//-          author: 'by Gabriel Carrasco',
+//-          title: 'Recieve money in any currency with no fees',
+//-          text: "The world is getting smaller and we're becoming more mobile. So why should you be forces to only received money in a single ..."
+//-      },
+//-  ]
+
+mixin season(seasonNumber, title, cards)
+    section.season
+        .season__content.container.container--pall
+            h2 Season #{seasonNumber} #{title} | #{cards.length} Episodes
+
+            .season__grid
+                each carditem in cards
+                    +card(carditem.image, carditem.title, carditem.description, carditem.seasonStatus, carditem.duration, carditem.isWatching)

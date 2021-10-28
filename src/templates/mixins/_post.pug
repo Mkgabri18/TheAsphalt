@@ -1,0 +1,8 @@
+
+
+mixin post(image, title, text)
+    .feature__item
+        .feature__icon
+            img(src=`./images/${image}.svg`, alt=`${image}`)
+        .feature__title= title
+        .feature__description= text

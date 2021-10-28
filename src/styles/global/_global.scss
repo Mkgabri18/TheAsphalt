@@ -1,0 +1,77 @@
+// Aplico las reglas bases para los elementos html, como un reset
+
+*,*::before,::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    // width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    line-height: 1.3;
+    color: $white;
+    font-weight: 300; // seteo basico
+    font-family: $lato;
+    font-size: $font-sm; //$body-font-size; // refactoring $font-md
+    @include breakpoint-up(large) {
+        font-size: $font-md; 
+    }
+    min-height: 100vh;
+    // overflow-x: hidden;
+
+    &.noscroll {
+        overflow: hidden;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 1.15;
+    color: $darkOrange;
+}
+
+h1 {
+    font-size: $h1-font-size; // 2.31rem 36.96px
+    margin-top: 1.5rem;
+    @include breakpoint-up(large) {
+        font-size: $font-xlg; // 3.25rem
+    }
+}
+
+h2 {
+    font-size: 1.875rem; // 30px
+    margin-bottom: 1rem; // 25px
+    @include breakpoint-up(large) {
+        font-size: 2.25rem; // 3.25rem
+    }
+}
+
+p {
+    // line-height: 1.5;
+    margin-bottom: 2.25rem;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+.big-title {
+    font-weight: bold;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+  
